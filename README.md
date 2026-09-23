@@ -1,2 +1,2 @@
 # 4SC3
-My work for the SMRTTECH 4ID3 course (McMaster BTech Automation)
+My work for the SMRTTECH 4SC3 course (McMaster BTech Automation)
