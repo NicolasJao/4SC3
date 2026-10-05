@@ -1,0 +1,7 @@
+Below is image dimension (you need to enter this in 
+edit visualziation when setting up the map):
+W: 2221
+H: 1918
+
+Real-world location coordinate (for your reference):
+43.7815378,-79.4945251
