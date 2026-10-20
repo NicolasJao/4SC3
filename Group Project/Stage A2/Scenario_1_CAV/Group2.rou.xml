@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-19T19:04:04.126434-05:00 by Eclipse SUMO netedit 1.26.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="CAV" minGap="1.50" speedFactor="normc(1.00,0.05,0.20,2.00)" color="0,176,255" laneChangeModel="LC2013" carFollowModel="CACC" accel="2.90" decel="7.5" tau="0.6"/>
+    <vType id="HDV" laneChangeModel="LC2013" lcCooperative="0.5"/>
+    <vType id="t_0"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E75" to="E86"/>
+    <flow id="f_00" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E75" to="E39"/>
+    <flow id="f_1" type="CAV" begin="0.00" end="3600.00" perHour="300.00" from="E12" to="E88"/>
+    <flow id="f_2" type="CAV" begin="0.00" end="3600.00" perHour="450.00" from="E75" to="E82"/>
+    <flow id="f_3" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E12" to="E82"/>
+    <flow id="f_4" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E12" to="E51"/>
+    <flow id="f_5" type="CAV" begin="0.00" end="3600.00" perHour="450.00" from="E157" to="E51"/>
+    <flow id="f_50" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E94" to="E82"/>
+    <flow id="f_52" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E94" to="E51"/>
+    <flow id="f_56" type="CAV" begin="0.00" end="3600.00" perHour="300.00" from="E94" to="E40"/>
+    <flow id="f_6" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E157" to="E39"/>
+    <flow id="f_7" type="CAV" begin="0.00" end="3600.00" perHour="150.00" from="E157" to="E86"/>
+</routes>
