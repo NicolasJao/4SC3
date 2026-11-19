@@ -194,9 +194,9 @@ window.SITE_CONFIG = {
       "This section clarifies academic context, roles, tools, and sources. Clear attribution improves credibility and shows ethical data handling.",
 
     members: [
-      { name: "Nicolas Jao", role: "Results Analysis and Visualization" }
-      { name: "Jacob Kwan", role: "SUMO Road Network Development" }
-      { name: "Haonan Ouyang", role: "Traffic Demand and Signal Configuration" }
+      { name: "Nicolas Jao", role: "Results Analysis and Visualization" },
+      { name: "Jacob Kwan", role: "SUMO Road Network Development" },
+      { name: "Haonan Ouyang", role: "Traffic Demand and Signal Configuration" },
     ],
 
     acknowledgments: [
