@@ -12,10 +12,10 @@ window.SITE_CONFIG = {
     // updated tagline text (big pill)
     tagline: "Course Project: Smart Cities and Communities",
 
-    studentName: "Yohan Mohammadi",
-    program: "Program / Department",
+    studentName: "Nicolas Jao",
+    program: "BTech Automation Systems Engineering Technology - Smart Systems / Engineering",
     university: "McMaster University, Canada",
-    email: "your.email@example.com"
+    email: "jaon@mcmaster.ca"
   },
 
   disclaimer: {
@@ -28,7 +28,7 @@ window.SITE_CONFIG = {
   },
 
   theme: {
-    heroBg: "#111111",
+    heroBg: "#232A33",
     heroText: "#ffffff",
     pageBg: "#f8fafc",
     accent: "#7c3aed"
@@ -58,12 +58,12 @@ window.SITE_CONFIG = {
 
   intro: {
     projectTitleLabel: "Project Title",
-    projectTitle: "Development of Digital Twin of a Railway Corridor Using Unity Game Engine and SUMO Traffic Simulation",
+    projectTitle: "Investigating Steeles Ave W-Keele St Traffic Conditions Using SUMO Simulation",
     heroVideo: "assets/video/video.mp4",
     heroVideoPoster: "",
     heroVideoAlt: "Autoplay preview video (academic project)",
     videoCaption:
-      "Autoplay preview (≈20 seconds): raw video → Traffic Simulation → Blender → Unity → Results"
+      "10 seconds of HDV base scenario simulation and 10 seconds of AV scenario simulation"
   },
 
   caseStudy: {
@@ -71,26 +71,24 @@ window.SITE_CONFIG = {
 
     backgroundTitle: "Background",
     backgroundBullets: [
-			"Global freight rail is growing and remains strategically important.",
-			"Rail carries about 18% of EU inland freight, 36% in the U.S., and 27% in India.",
-			"Road dominates many freight systems, so rail often receives less attention.",
-			"In Canada, rail accounted for 10.5% of international merchandise trade value in 2024."
+			"The study area is the intersection of Steeles Avenue West and Keele Street in Vaughan, Ontario, where two major arterials meet at the Vaughan-Toronto boundary.",
+      "A digital roadway-and-traffic model built in SUMO lets us test conditions that are repeatable and cannot be run on a live road.",
+      "A 100% autonomous vehicle (AV) scenario could change the speed-density relationship through shorter headways and smoother driving, but the direction of the effect is unknown.",
+      "Signal timing can improve flow without new construction, so a longer east-west green is a reasonable first measure to test."
     ],
 
     problemTitle: "Problem Statement",
     problemBullets: [
-			"Railway operations are hard to assess.",
-			"3D asset creation is time-consuming.",
-			"2D models lack immersion.",
-			"Results are difficult to communicate."
+			"Problem 1: The study needs a complete digital baseline of the intersection, including network, demand, and signal timing.",
+      "Problem 2: AV behavior on the selected edge cannot be inferred from the human-driven vehicle (HDV) model alone.",
+      "Problem 3: There is no before-and-after evidence on whether a signal timing change improves conditions on the selected edge."
     ],
 
     objectivesTitle: "Project Objectives",
     objectivesBullets: [
-			"Simulate train scheduling, signaling, and capacity in SUMO.",
-			"Create 3D digital assets using generative AI and blender.",
-			"Create 3D rail environment and VR video in Unity.",
-			"Present results in different styles through KPIs, figures, and a showcase website."
+			"Objective 1: Develop a digital road network and traffic model of the intersection and characterize the 100% HDV baseline.",
+      "Objective 2: Compare the speed-density relationship of the selected edge under 100% AV versus 100% HDV traffic.",
+      "Objective 3: Select, implement, and evaluate a signal change (east-west green from 27 s to 41 s) by comparing speed-density results before and after."
     ]
   },
 
@@ -98,64 +96,64 @@ window.SITE_CONFIG = {
     title: "Methodology",
     steps: [
       {
-        title: "Step 1: Train Scheduling and Signaling (SUMO Simulation)",
-				text: "Build the rail network and test routing, signaling, and timetables.",
+        title: "Step 1: Road Network Development (SUMO)",
+        text: "Build the Steeles Ave W and Keele St network from GIS data and check its junction geometry.",
         image: "assets/img/image2.jpg"
       },
       {
-				title: "Step 2: Digital Twin Assets Developement (Blender)",
-				text: "Create a 3D railway assets using generative AI and blender.",
+        title: "Step 2: 100% HDV Baseline Scenario",
+        text: "Add traffic demand and signal timing, then run the base scenario and fit edge E78's speed-density curve.",
         image: "assets/img/image3.jpg"
       },
       {
-				title: "Step 3: Immersive VR Visualization (Unity)",
-				text: "Create a 3D railway scene and produce a VR 360-degree video.",
+        title: "Step 3: 100% AV Scenario",
+        text: "Change only the vehicle behavior parameters and compare the result with the baseline on the same edge.",
         image: "assets/img/image4.jpg"
       },
       {
-				title: "Step 4: Results & Communication (Figures + Showcase Website)",
-				text: "Summarize results using figures, KPIs, and the showcase website.",
+        title: "Step 4: Signal Timing Intervention",
+        text: "Raise the east-west green from 27 s to 41 s and compare speed-density results before and after.",
         image: "assets/img/image5.jpg"
       }
     ]
   },
 
   implementation: {
-    title: "Methodology Steps (Demo Modules)",
+    title: "Methodology Steps",
     modules: [
       {
-        title: "Module 1: Train Scheduling & Signaling (SUMO)",
+        title: "Module 1: Road Network Development (SUMO)",
         bullets: [
-				  { text: "Build a simulated rail network in SUMO with train routing and maximum operating speed." },
-          { text: "Design fixed-block rail signals and define station stops along the corridor." },
-          { text: "Configure timetable, scheduled departures, running time, dwell time, and headway." }
+          { text: "Build the network from GIS data, including major roads, local roads, and lanes." },
+          { text: "Model junction geometry, turning lanes, and lane-to-lane connections." },
+          { text: "Run connectivity and visual checks so the geometry is fixed for every scenario." }
         ],
         image: "assets/img/image2.jpg"
       },
       {
-        title: "Module 2: Digital Twin Assets Developement (Blender)",
+        title: "Module 2: 100% HDV Baseline Scenario",
         bullets: [
-          { text: "Generative AI: use Meshy.ai tool to develop different assets." },
-          { text: "From generative AI to belnder." },
-          { text: "Preprocessing assets in Blender ." }
+          { text: "Assign 450 veh/h east-west and 300 veh/h north-south, with 27 s of green each." },
+          { text: "Use SUMO default passenger car parameters with the LC2013 lane-change model." },
+          { text: "Collect edgeData output and fit the speed-density diagram for edge E78." }
         ],
         image: "assets/img/image3.jpg"
       },
       {
-        title: "Module 3: Immersive VR Visualization (Unity)",
+        title: "Module 3: 100% AV Scenario",
         bullets: [
-				  { text: "Develop a 3D railway environment including stations, buildings, trees, and rolling stock." },
-          { text: "Configure visualization fundamentals: lighting, camera position, time of day, and scene composition." },
-          { text: "Produce a VR 360-degree video output for immersive presentation and portfolio use." }
+          { text: "Keep geometry, demand, routes, signals, and the selected edge identical to the baseline." },
+          { text: "Use AV parameters: 0.6 s time headway, 1.5 m minimum gap, and 0.05 speed deviation." },
+          { text: "Compare the AV and HDV speed-density fits on the same edge." }
         ],
         image: "assets/img/image4.jpg"
       },
       {
-        title: "Module 4: Results & Communication",
+        title: "Module 4: Signal Timing Intervention",
         bullets: [
-          { text: "Dashboard or plot set: KPI cards, bar charts, and/or time series." },
-          { text: "Scenario story: what changed, what improved, and what tradeoffs appeared." },
-          { text: "Limitations + next steps: what data would strengthen confidence." }
+          { text: "Increase the east-west green from 27 s to 41 s and keep the north-south green at 27 s." },
+          { text: "Run Scenario 2 with 100% HDVs and change nothing else." },
+          { text: "Compare speed, density, and implied capacity on edge E78 against the baseline." }
         ],
         image: "assets/img/image5.jpg"
       }
@@ -163,32 +161,32 @@ window.SITE_CONFIG = {
   },
 
 	results: {
-			title: "Results & Potential Improvements",
-			subtitle:
-				"Train schedule simulation outputs across two scenarios showing arrivals, departures, and dwell time across four stations. Results are for educational purposes only.",
+    title: "Results & Potential Improvements",
+    subtitle:
+      "Speed-density results on edge E78 for the HDV baseline, the 100% AV scenario, and the signal timing intervention. Results are simulation-based and for educational purposes only.",
 
-			charts: {
-				left: {
-					title: "Scenario 1 — Train Schedule: Arrivals, Departures & Dwell Time",
-					src: "assets/img/image6.jpg",
-					alt: "Scenario 1 train schedule chart showing arrivals and departures across S1 to S4"
-				},
-				right: {
-					title: "Scenario 2 — Train Schedule: Arrivals, Departures & Dwell Time",
-					src: "assets/img/image7.jpg",
-					alt: "Scenario 2 train schedule chart showing arrivals and departures across S1 to S4"
-				}
-			},
+    charts: {
+      left: {
+        title: "Base (100% HDV) vs Scenario 1 (100% AV): Speed-Density on Edge E78",
+        src: "assets/img/image6.jpg",
+        alt: "Speed-density observations on edge E78 for the 100% HDV base scenario and the 100% AV scenario"
+      },
+      right: {
+        title: "Base vs Scenario 2 (Signal Change): Speed-Density on Edge E78",
+        src: "assets/img/image7.jpg",
+        alt: "Speed-density observations on edge E78 before and after the east-west green time increase"
+      }
+    },
 
-			discussionTitle: "Discussion",
-			discussionBullets: [
-				"Scenario 1 provides a stable baseline timetable with consistent station dwell and smooth train progression.",
-				"Scenario 2 applies a delay at S2, which then propagates to downstream stations.",
-				"Delay effects grow across frequency levels, with major increases in arrival and departure times at S3 and S4.",
-				"S1 is only slightly affected, while downstream stations absorb most of the disruption.",
-				"This demonstrates the importance of recovery time, dwell management, and operational control in rail scheduling."
-			]
-		},
+    discussionTitle: "Discussion",
+    discussionBullets: [
+      "The AV scenario shows no clear change: fitted values differ by 2% or less (R² 0.841 vs 0.836, capacity about 816 vs 822 veh/h).",
+      "The signal controls speed on this edge, with speeds below 7 m/s, so shorter AV headways have little room to matter at this demand.",
+      "The signal change gives a mixed result: implied capacity rises about 2.5% (816 to 837 veh/h) and the densest observations are less severe.",
+      "However, the fit weakens (R² falls from 0.841 to 0.744) and scatter grows at 40 to 55 veh/km.",
+      "Limitations include assumed demand and signal data, a single run, a single edge, and no field calibration, so the evidence supports further study, not implementation."
+    ]
+  },
 
   team: {
     title: "Team & Acknowledgments",
@@ -196,7 +194,9 @@ window.SITE_CONFIG = {
       "This section clarifies academic context, roles, tools, and sources. Clear attribution improves credibility and shows ethical data handling.",
 
     members: [
-      { name: "Your Name", role: "Rail Scheduling & Signaling + Digital Twin I, Immersive VR Visualization + Results & Communication" }
+      { name: "Nicolas Jao", role: "Results Analysis and Visualization" }
+      { name: "Jacob Kwan", role: "SUMO Road Network Development" }
+      { name: "Haonan Ouyang", role: "Traffic Demand and Signal Configuration" }
     ],
 
     acknowledgments: [
@@ -207,6 +207,6 @@ window.SITE_CONFIG = {
     ],
 
     repoLabel: "Project Repository",
-    repoUrl: "https://github.com/USERNAME/REPO"
+    repoUrl: "https://github.com/NicolasJao/4SC3"
   }
 };
