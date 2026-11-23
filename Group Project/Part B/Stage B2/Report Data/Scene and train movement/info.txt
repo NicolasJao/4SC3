@@ -1,0 +1,9 @@
+Unity version: 6000.3.13f1, or Unity 6.3 LTS
+final scene path: "Group02_StageB2_ReportB\Group02\UnityProject\Assets\Scenes\Group02_B2.unity"
+train type: passenger locomotive with coach cars
+number of locomotives: 2 (1 at each end because GO trains go both directions)
+number of coach cars: 13
+movement method: C# script
+path: drawn path on RailwayWorkshop - Copy object with mesh colliders
+speed setting: 30
+No relevant offsets

@@ -1,0 +1,14 @@
+Video duration: 30 s
+FPS: 30
+Resolution: 4096W x 2048H
+Vide link: https://www.youtube.com/watch?v=8CXkN81lpho
+
+Optimization choice: Changing Directional Light Shadow Type from "Soft Shadows" to "No Shadows"
+
+Before optimization:
+Tris: 13.6M
+FPS: 83.0
+
+After optimization:
+Tris: 6.3M
+FPS: 112.8
